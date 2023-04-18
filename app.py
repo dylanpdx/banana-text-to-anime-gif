@@ -12,7 +12,7 @@ import ffmpeg
 def init():
     global model
     model_dir = pathlib.Path('weights')
-    snapshot_download('damo-vilab/modelscope-damo-text-to-video-synthesis', repo_type='model', local_dir=model_dir)
+    snapshot_download('kabachuha/animov-0.1-modelscope-original-format', repo_type='model', local_dir=model_dir)
     model = pipeline('text-to-video-synthesis', model_dir.as_posix())
 
 # Inference is ran for every server call
